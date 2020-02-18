@@ -1,4 +1,5 @@
 describe('index.js', function () {
+  this.timeout(0)
   const drivers = ['Sally', 'Bob', 'Freddy', 'Claudia'];
 
   afterEach(function () {
@@ -6,18 +7,21 @@ describe('index.js', function () {
   });
 
   describe('returnFirstTwoDrivers()', function () {
+    this.timeout(0)
     it('should return a new array containing the first two drivers from the passed-in array', function () {
       expect(returnFirstTwoDrivers(drivers)).to.eql(['Sally', 'Bob']);
     });
   });
 
   describe('returnLastTwoDrivers()', function () {
+    this.timeout(0)
     it('should return an array of the last two drivers', function () {
       expect(returnLastTwoDrivers(['Sally', 'Bob', 'Freddy', 'Claudia'])).to.eql(['Freddy', 'Claudia']);
     });
   });
 
   describe('selectingDrivers', function () {
+    this.timeout(0)
     it('has the `returnFirstTwoDrivers` function to as its first element', function () {
       expect(selectingDrivers[0]).to.eql(returnFirstTwoDrivers);
     });
@@ -34,6 +38,7 @@ describe('index.js', function () {
   });
 
   describe('createFareMultiplier()', function () {
+    this.timeout(0)
     it('returns a function', function () {
       const fareMultiplier = createFareMultiplier(2);
 
@@ -48,6 +53,7 @@ describe('index.js', function () {
   });
 
   describe('fareDoubler()', function () {
+    this.timeout(0)
     it('is a function', function () {
       expect(fareDoubler).to.be.a('function');
     });
@@ -58,6 +64,7 @@ describe('index.js', function () {
   });
 
   describe('fareTripler()', function () {
+    this.timeout(0)
     it('is a function', function () {
       expect(fareTripler).to.be.a('function');
     });
@@ -68,6 +75,7 @@ describe('index.js', function () {
   });
 
   describe('selectDifferentDrivers(arrayOfDrivers, function)', function () {
+    this.timeout(0)
     it('returns the first two drivers when passed returnFirstTwoDrivers() as the second argument', function () {
       expect(selectDifferentDrivers(drivers, returnFirstTwoDrivers)).to.eql(['Sally', 'Bob']);
     });
